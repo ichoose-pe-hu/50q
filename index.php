@@ -24,24 +24,41 @@ fclose($fp);
 
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-16" />
-<link rel="stylesheet" type="text/css" href="/styles.css" />
-<link rel="stylesheet" type="text/css" href="/50q/50q.css" />
-<script type="text/javascript" src="http://www.google.com/jsapi"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-<script type="text/javascript">
-$(function(){
-$("#top").load("http://ichoose.pe.hu/top.html");
-$("#inside").load("http://ichoose.pe.hu/50q/tips.html");
-})
-</script>
-<title>Answer 50 Questions | The Answers are always inside of you</title>
+<title>50 Questions | The Answers are always inside of you</title>
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="50の質問のコレクションを作成しています。さまざまな人が考えた50の質問をお楽しみください。">
+
+<link rel="stylesheet" type="text/css" href="../10q/list.css" />
+<link rel="stylesheet" type="text/css" href="../10q/styles.css" />
+
+<style>
+#today {
+  position:fixed;
+  z-index:10;
+  top:0; left:0;
+  width:100%;
+  height:100vh;
+  display:none;
+}
+#inside {
+  top: 50%;
+  left: 50%;
+  z-index:25;
+  z-index:100;
+  height: 75vh;
+  width: 75%;
+  position:absolute;
+  margin:0; padding:0;
+  -webkit-transform:translate(-50%,-50%);
+  transform:translate(-50%,-50%);
+}
+</style>
+
 </head>
 <body>
 <div id="top"></div>
@@ -51,7 +68,8 @@ $("#inside").load("http://ichoose.pe.hu/50q/tips.html");
 <div id="ichoose">
 <h1><i>Play</i></h1>
 <div id="howto">
-<h3>We create a collection of<br/><i>50 Questions</i></h3>
+<h3>We create a collection of</h3>
+<h3><i>50 Questions</i></h3>
 <h3>Let's enjoy 50 Questions by varaious peoples here.</h3>
 <p>50の質問のコレクションを作成します。<br/>
 さまざまな人が考えた50の質問をお楽しみください。</p>
@@ -67,13 +85,21 @@ $("#inside").load("http://ichoose.pe.hu/50q/tips.html");
 <p>coming soon</p>
 <?php endif; ?>
 </div>
-<h1>by creative, community space <a class="pehu" href="http://vg.pe.hu/jp/">∧°┐</a></h1>
+<h1>by creative, community space <a class="pehu" href="https://creative-community.space/pehu/">∧°┐</a></h1>
 </div>
 </div>
 
 <div id="today">
 <div id="inside">
+<iframe src="tips.html" frameborder="0">読み込んでいます…</iframe>
 </div>
 </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript">
+  $(function(){
+  $("#top").load("../10q/howto.html");
+  })
+</script>
 </body>
 </html>

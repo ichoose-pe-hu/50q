@@ -68,7 +68,6 @@ fclose($fp);
 
 <div id="main">
 <div id="ichoose">
-<h1><i>Play</i></h1>
 <div id="howto">
 <h3>We create a collection of</h3>
 <h3><i>50 Questions</i></h3>

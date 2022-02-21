@@ -8,7 +8,7 @@ $name = (string)filter_input(INPUT_POST, 'name'); // $_POST['name']
 $link = (string)filter_input(INPUT_POST, 'link'); // $_POST['link']
 $tag = (string)filter_input(INPUT_POST, 'tag'); // $_POST['tag']
 
-$fp = fopen('50q.csv', 'a+b');
+$fp = fopen('play.csv', 'a+b');
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     flock($fp, LOCK_EX);
     fputcsv($fp, [$name, $link, $tag]);
@@ -37,6 +37,8 @@ fclose($fp);
 <link rel="stylesheet" type="text/css" href="../10q/styles.css" />
 
 <style>
+#play {margin:10%;}
+#play p {margin-bottom:10%;}
 #today {
   position:fixed;
   z-index:10;
@@ -82,11 +84,11 @@ fclose($fp);
 <p>が考えた 50の質問 です。</p>
 <?php endforeach; ?>
 <?php else: ?>
-<p>coming soon</p>
+<p>Under Construction</p>
 <?php endif; ?>
 </div>
-<h1>by creative, community space <a class="pehu" href="https://creative-community.space/pehu/">∧°┐</a></h1>
 </div>
+<h1>by creative, community space <a class="pehu" href="https://creative-community.space/pehu/">∧°┐</a></h1>
 </div>
 
 <div id="today">
